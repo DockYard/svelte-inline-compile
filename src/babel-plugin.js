@@ -6,7 +6,15 @@ module.exports = function (_babel) {
       TaggedTemplateExpression(path) {
         const tag = path.get("tag");
 
-        if (!tag.isIdentifier({ name: "svelte" })) return;
+        if (
+          !tag.isIdentifier({ name: "svelte" }) &&
+          !(
+            tag.type === "MemberExpression" &&
+            tag.get("property").isIdentifier({ name: "svelte" })
+          )
+        ) {
+          return;
+        }
 
         const template = path.node.quasi.quasis
           .map((quasi) => quasi.value.cooked)
