@@ -21,11 +21,15 @@ module.exports = function (_babel) {
           .join("");
 
         const componentSrc = compiler
-          .compile(template, { format: "cjs" })
-          .js.code.replace("exports.default =", "return");
+          .compile(template, {
+            format: "cjs",
+            css: true,
+            accessors: true,
+            dev: true
+          }).js.code.replace("exports.default =", "return");
 
         path.replaceWithSourceString(`(function () { ${componentSrc} })()`);
       },
-    },
+    }
   };
 };
