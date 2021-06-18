@@ -1,6 +1,31 @@
-const babel = require("@babel/core");
-const babelPlugin = require("./babel-plugin");
+const compiler = require("svelte/compiler");
 
-module.exports = function tranform(code) {
-  return babel.transform(code, { plugins: [babelPlugin] });
+module.exports = function (_babel) {
+  return {
+    visitor: {
+      TaggedTemplateExpression(path) {
+        const tag = path.get("tag");
+
+        if (
+          !tag.isIdentifier({ name: "svelte" }) &&
+          !(
+            tag.type === "MemberExpression" &&
+            tag.get("property").isIdentifier({ name: "svelte" })
+          )
+        ) {
+          return;
+        }
+
+        const template = path.node.quasi.quasis
+          .map((quasi) => quasi.value.cooked)
+          .join("");
+
+        const componentSrc = compiler
+          .compile(template, { format: "cjs" })
+          .js.code.replace("exports.default =", "return");
+
+        path.replaceWithSourceString(`(function () { ${componentSrc} })()`);
+      },
+    },
+  };
 };
