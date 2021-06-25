@@ -76,7 +76,14 @@ Component testing should not be that hard. You should be able to test your compo
 
 Steps:
 1. Install the component as a dev dependency with `npm install --save-dev svelte-inline-compile`.
-2. Add `import svelte from 'svelte-intl-compile'` and start writing tests like you write your application code:
+2. Add `svelte-inline-compile` to the list of babel plugins in your `babel.config.js` (or similar config file):
+```js
+module.exports = {
+  "presets": [["@babel/preset-env", { "targets": { "node": "current" } }]],
+  "plugins": ["svelte-inline-compile"]
+}%
+```
+3. Add `import svelte from 'svelte-intl-compile'` and start writing tests like you write your application code:
 
 ```js
 import '@testing-library/jest-dom/extend-expect'
