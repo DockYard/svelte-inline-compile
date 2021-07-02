@@ -3,12 +3,16 @@
   "version": "0.0.1",
   "main": "src/index.js",
   "license": "MIT",
+  "scripts": {
+    "test": "jest test"
+  },
   "peerDependencies": {
     "@babel/core": "^7.14.6",
     "svelte": "^3.38.2"
   },
   "devDependencies": {
     "@babel/core": "^7.14.6",
-    "svelte": "^3.38.2"    
+    "jest": "^27.0.6",
+    "svelte": "^3.38.2"
   }
 }
