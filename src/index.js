@@ -6,15 +6,7 @@ module.exports = function (_babel) {
       TaggedTemplateExpression(path) {
         const tag = path.get("tag");
 
-        if (
-          !tag.isIdentifier({ name: "svelte" }) &&
-          !(
-            tag.type === "MemberExpression" &&
-            tag.get("property").isIdentifier({ name: "svelte" })
-          )
-        ) {
-          return;
-        }
+        if (!tag.isIdentifier({ name: "svelte" })) return;
 
         const template = path.node.quasi.quasis
           .map((quasi) => quasi.value.cooked)
@@ -25,11 +17,12 @@ module.exports = function (_babel) {
             format: "cjs",
             css: true,
             accessors: true,
-            dev: true
-          }).js.code.replace("exports.default =", "return");
+            dev: true,
+          })
+          .js.code.replace("exports.default =", "return");
 
         path.replaceWithSourceString(`(function () { ${componentSrc} })()`);
       },
-    }
+    },
   };
 };
