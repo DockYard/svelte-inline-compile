@@ -1,18 +1,9 @@
 {
-  "name": "babel-plugin-svelte-inline-compile",
-  "version": "0.0.1",
-  "main": "src/index.js",
+  "name": "root",
+  "private": true,
   "license": "MIT",
-  "scripts": {
-    "test": "jest test"
-  },
-  "peerDependencies": {
-    "@babel/core": "^7.14.6",
-    "svelte": "^3.38.2"
-  },
-  "devDependencies": {
-    "@babel/core": "^7.14.6",
-    "jest": "^27.0.6",
-    "svelte": "^3.38.2"
-  }
+  "workspaces": [
+    "packages/babel-plugin-svelte-inline-compile",
+    "packages/svelte-inline-compile"
+  ]
 }

@@ -1,0 +1,28 @@
+{
+  "name": "babel-plugin-svelte-inline-compile",
+  "version": "0.0.1",
+  "description": "",
+  "main": "src/index.js",
+  "devDependencies": {
+    "@babel/core": "^7.14.6",
+    "jest": "^27.0.6",
+    "svelte": "^3.38.3"
+  },
+  "scripts": {
+    "test": "jest test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DockYard/svelte-inline-compile.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/DockYard/svelte-inline-compile/issues"
+  },
+  "homepage": "https://github.com/DockYard/svelte-inline-compile#readme",
+  "peerDependencies": {
+    "@babel/core": "^7.14.6",
+    "svelte": "^3.38.3"
+  }
+}
