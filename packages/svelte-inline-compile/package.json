@@ -1,13 +1,13 @@
 {
   "name": "svelte-inline-compile",
   "version": "0.0.1",
-  "description": "",
+  "description": "Precompile inline Svelte components via ES6 tagged template strings",
   "main": "src/index.js",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/DockYard/svelte-inline-compile.git"
   },
-  "author": "",
+  "author": "drew.chandler@dockyard.com",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/DockYard/svelte-inline-compile/issues"

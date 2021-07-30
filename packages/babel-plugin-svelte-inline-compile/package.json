@@ -1,7 +1,7 @@
 {
   "name": "babel-plugin-svelte-inline-compile",
   "version": "0.0.1",
-  "description": "",
+  "description": "Babel plugin to replace tagged template strings with precompiled Svelte components",
   "main": "src/index.js",
   "devDependencies": {
     "@babel/core": "^7.14.6",
@@ -15,7 +15,7 @@
     "type": "git",
     "url": "git+https://github.com/DockYard/svelte-inline-compile.git"
   },
-  "author": "",
+  "author": "drew.chandler@dockyard.com",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/DockYard/svelte-inline-compile/issues"
