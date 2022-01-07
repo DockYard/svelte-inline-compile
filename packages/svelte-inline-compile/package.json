@@ -15,5 +15,6 @@
   "homepage": "https://github.com/DockYard/svelte-inline-compile#readme",
   "dependencies": {
     "babel-plugin-svelte-inline-compile": "^0.0.1"
-  }
+  },
+  "types": "src/index.d.ts"
 }
