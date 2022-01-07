@@ -4,6 +4,7 @@
   "license": "MIT",
   "workspaces": [
     "packages/babel-plugin-svelte-inline-compile",
-    "packages/svelte-inline-compile"
+    "packages/svelte-inline-compile",
+    "packages/vite-plugin-svelte-inline-compile"
   ]
 }

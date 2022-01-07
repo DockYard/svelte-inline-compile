@@ -1,12 +1,15 @@
 {
-  "name": "svelte-inline-compile",
-  "version": "0.1.0",
+  "name": "vite-plugin-svelte-inline-compile",
+  "version": "0.0.1",
   "description": "Precompile inline Svelte components via ES6 tagged template strings",
   "main": "src/index.js",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/DockYard/svelte-inline-compile.git"
   },
+  "keywords": [
+    "vite-plugin", "svelte", "vitest"
+  ],
   "author": "drew.chandler@dockyard.com",
   "license": "MIT",
   "bugs": {
@@ -14,7 +17,8 @@
   },
   "homepage": "https://github.com/DockYard/svelte-inline-compile#readme",
   "dependencies": {
-    "babel-plugin-svelte-inline-compile": "^0.1.0"
+    "babel-plugin-svelte-inline-compile": "^0.1.0",
+    "@babel/core": "^7.14.6"
   },
-  "types": "src/index.d.ts"
+  "type": "module"
 }
