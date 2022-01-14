@@ -1,0 +1,19 @@
+{
+  "name": "eslint-plugin-svelte-inline-compile",
+  "version": "0.0.1",
+  "description": "eslint support for inline compiled svelte components",
+  "main": "src/index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DockYard/svelte-inline-compile.git"
+  },
+  "author": "drew.chandler@dockyard.com",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/DockYard/svelte-inline-compile/issues"
+  },
+  "homepage": "https://github.com/DockYard/svelte-inline-compile#readme",
+  "peerDependencies": {
+    "svelte": ">=3.38.3"
+  }
+}
