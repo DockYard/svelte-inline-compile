@@ -1,6 +1,6 @@
 {
   "name": "svelte-inline-compile",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Precompile inline Svelte components via ES6 tagged template strings",
   "main": "src/index.js",
   "repository": {
@@ -16,5 +16,6 @@
   "dependencies": {
     "babel-plugin-svelte-inline-compile": "^0.1.0"
   },
-  "types": "src/index.d.ts"
+  "types": "src/index.d.ts",
+  "type": "module"
 }
